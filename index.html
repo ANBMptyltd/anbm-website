@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
   <title>A.N Building & Management | Premium Builder Sydney</title>
   <meta name="description" content="A.N Building and Management Pty Ltd — Licensed NSW builder specialising in premium residential and commercial construction across Sydney. Licence No. 494053C."/>
   <meta name="keywords" content="builder sydney, residential builder sydney, commercial builder sydney, licensed builder nsw, ANBM"/>
@@ -572,22 +572,52 @@
     .footer-licence { font-size: 11px; color: rgba(184,146,79,0.5); text-align: right; }
 
     /* ── MOBILE ── */
+    @media (max-width: 1024px) {
+      .hero h1 { font-size: clamp(36px, 6vw, 64px); }
+      .hero-panel-logo .logo-mark-hero { font-size: 56px; }
+    }
+
     @media (max-width: 900px) {
-      nav { padding: 16px 24px; }
+      nav { padding: 16px 20px; }
       .nav-links, .nav-btn { display: none; }
       .mobile-toggle { display: block; }
 
-      .hero { grid-template-columns: 1fr; min-height: auto; padding: 100px 0 0; }
-      .hero-left { padding: 40px 24px 40px; }
-      .hero-right { min-height: 50vh; }
-      .hero-panel { min-height: 50vh; padding: 40px 24px; }
+      /* Hero - stack vertically, full width */
+      .hero {
+        grid-template-columns: 1fr !important;
+        min-height: auto !important;
+        padding: 0 !important;
+      }
+      .hero-left {
+        padding: 100px 24px 48px !important;
+        min-height: auto !important;
+      }
+      .hero-left h1 { font-size: clamp(36px, 8vw, 52px); }
+      .hero-right {
+        min-height: 420px !important;
+        width: 100% !important;
+      }
+      .hero-panel {
+        min-height: 420px !important;
+        padding: 40px 24px !important;
+        width: 100% !important;
+      }
+      .hero-badges {
+        flex-wrap: wrap !important;
+        gap: 0 !important;
+      }
+      .badge {
+        flex: 1 1 45% !important;
+        border-right: 1px solid var(--border) !important;
+        border-bottom: 1px solid var(--border) !important;
+      }
 
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .about-stats { grid-template-columns: 1fr 1fr; }
 
       .services-grid { grid-template-columns: 1fr; }
 
-      .why-grid { grid-template-columns: 1fr; gap: 40px; }
+      .why-grid { grid-template-columns: 1fr; gap: 32px; }
 
       .process-steps { grid-template-columns: 1fr 1fr; gap: 32px; }
       .process-steps::before { display: none; }
@@ -596,18 +626,38 @@
       .contact-form { padding: 32px 24px; }
       .form-row { grid-template-columns: 1fr; }
 
-      section { padding: 70px 24px; }
+      section { padding: 64px 24px; }
       footer { padding: 40px 24px 28px; }
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
       .footer-licence { text-align: left; }
+
+      .hero-panel-creds { gap: 10px; }
+      .cred-row { padding: 10px 0; }
+    }
+
+    @media (max-width: 640px) {
+      .hero-left { padding: 90px 20px 40px !important; }
+      .hero-left h1 { font-size: clamp(32px, 9vw, 44px); }
+      .hero-panel { padding: 32px 20px !important; }
+      .hero-panel-logo .logo-mark-hero { font-size: 48px; letter-spacing: -2px; }
+      .hero-badges { gap: 0; }
+      .badge { flex: 1 1 45%; }
+      section { padding: 56px 20px; }
+      .process-steps { grid-template-columns: 1fr; }
+      .about-stats { grid-template-columns: 1fr 1fr; gap: 16px; }
     }
 
     @media (max-width: 480px) {
+      .hero-left { padding: 88px 16px 36px !important; }
+      .hero-panel { padding: 28px 16px !important; }
+      .hero-panel-logo .logo-mark-hero { font-size: 42px; }
       .footer-grid { grid-template-columns: 1fr; }
-      .hero-badges { flex-direction: column; }
-      .badge { border-right: 1px solid var(--border) !important; }
-      .process-steps { grid-template-columns: 1fr; }
+      .badge { flex: 1 1 100%; border-right: none !important; }
+      section { padding: 48px 16px; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; gap: 12px; }
+      .hero-actions a { text-align: center; }
     }
 
     /* ── ANIMATIONS ── */
@@ -725,6 +775,10 @@
         <span class="badge-key">Contract Works</span>
       </div>
       <div class="badge">
+        <span class="badge-val">PI</span>
+        <span class="badge-key">Prof. Indemnity</span>
+      </div>
+      <div class="badge">
         <span class="badge-val">494053C</span>
         <span class="badge-key">NSW Licence No.</span>
       </div>
@@ -763,6 +817,10 @@
         <div class="cred-row">
           <span class="cred-key">Workers Compensation</span>
           <span class="cred-val">Current · icare NSW</span>
+        </div>
+        <div class="cred-row">
+          <span class="cred-key">Prof. Indemnity (PI)</span>
+          <span class="cred-val">Current &amp; Insured</span>
         </div>
         <div class="cred-row">
           <span class="cred-key">HBCF</span>
@@ -867,7 +925,7 @@
             <div class="why-dot"></div>
             <div>
               <div class="why-item-title">Fully Licensed &amp; Insured</div>
-              <div class="why-item-desc">Current NSW contractor licence, public liability, contract works, and HBCF approval — every box ticked before we touch your project.</div>
+              <div class="why-item-desc">Current NSW contractor licence, public liability, professional indemnity, contract works, and HBCF approval — every box ticked before we touch your project.</div>
             </div>
           </div>
           <div class="why-item">
