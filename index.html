@@ -31,12 +31,10 @@
     html { scroll-behavior: smooth; background: var(--cream); color: var(--dark); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
     body { background: var(--cream); }
 
-    /* ── SCROLLBAR ── */
     ::-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar-track { background: var(--cream2); }
     ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
 
-    /* ── NAV ── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 200;
       display: flex; align-items: center; justify-content: space-between;
@@ -69,7 +67,6 @@
 
     .mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
 
-    /* ── HERO ── */
     .hero {
       min-height: 100vh;
       display: grid;
@@ -92,15 +89,6 @@
       justify-content: center;
       position: relative;
       height: 100%;
-    }
-
-    /* Big decorative background logo */
-    .hero-bg-mark {
-      position: absolute;
-      right: -40px;
-      top: 50%;
-      transform: translateY(-50%);
-      opacity: 0.06;
     }
 
     .hero-tag {
@@ -148,9 +136,7 @@
     }
     .btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
 
-    .hero-badges {
-      display: flex; gap: 0; flex-wrap: wrap;
-    }
+    .hero-badges { display: flex; gap: 0; flex-wrap: wrap; }
 
     .badge {
       padding: 16px 20px;
@@ -172,7 +158,6 @@
       text-transform: uppercase; color: var(--stone); display: block;
     }
 
-    /* Hero right panel */
     .hero-panel {
       width: 100%; height: 100%;
       background: var(--dark);
@@ -238,10 +223,8 @@
     .cred-key { color: rgba(253,250,247,0.35); font-weight: 400; }
     .cred-val { color: rgba(253,250,247,0.8); font-weight: 500; }
 
-    /* ── GOLD BAR ── */
     .gold-bar { height: 3px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
 
-    /* ── SECTION BASE ── */
     section { padding: 100px 80px; }
     .section-inner { max-width: 1200px; margin: 0 auto; }
 
@@ -262,14 +245,9 @@
 
     h2 em { font-style: italic; color: var(--gold); }
 
-    .sec-body {
-      font-size: 15px; font-weight: 300; color: var(--stone);
-      line-height: 1.85; max-width: 540px;
-    }
+    .sec-body { font-size: 15px; font-weight: 300; color: var(--stone); line-height: 1.85; max-width: 540px; }
 
-    /* ── ABOUT ── */
     .about { background: var(--cream2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 
     .about-stats {
@@ -278,10 +256,7 @@
       border: 1px solid var(--border);
     }
 
-    .about-stat {
-      background: var(--cream3); padding: 36px 28px;
-      transition: background 0.2s;
-    }
+    .about-stat { background: var(--cream3); padding: 36px 28px; transition: background 0.2s; }
     .about-stat:hover { background: var(--white); }
 
     .stat-val {
@@ -289,12 +264,8 @@
       font-size: 36px; font-weight: 400; color: var(--gold);
       display: block; margin-bottom: 8px; line-height: 1;
     }
-    .stat-key {
-      font-size: 10px; font-weight: 600; letter-spacing: 1.5px;
-      text-transform: uppercase; color: var(--stone);
-    }
+    .stat-key { font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--stone); }
 
-    /* ── SERVICES ── */
     .services-grid {
       display: grid; grid-template-columns: repeat(3, 1fr);
       gap: 1px; background: var(--border);
@@ -325,15 +296,9 @@
       line-height: 1; margin-bottom: 20px; display: block;
     }
 
-    .svc-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px; font-weight: 400; color: var(--dark);
-      margin-bottom: 14px;
-    }
-
+    .svc-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; color: var(--dark); margin-bottom: 14px; }
     .svc-desc { font-size: 13px; font-weight: 300; color: var(--stone); line-height: 1.8; }
 
-    /* ── WHY ── */
     .why { background: var(--dark); }
     .why .sec-tag { color: var(--gold2); }
     .why .sec-tag::after { background: var(--gold2); }
@@ -341,7 +306,6 @@
     .why .sec-body { color: rgba(253,250,247,0.45); }
 
     .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-
     .why-items { margin-top: 48px; }
 
     .why-item {
@@ -351,28 +315,14 @@
     }
     .why-item:first-child { border-top: 1px solid rgba(206,197,186,0.12); }
 
-    .why-dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: var(--gold); flex-shrink: 0; margin-top: 7px;
-    }
+    .why-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 7px; }
 
-    .why-item-title {
-      font-size: 13px; font-weight: 600; color: var(--white);
-      margin-bottom: 6px; letter-spacing: 0.3px;
-    }
+    .why-item-title { font-size: 13px; font-weight: 600; color: var(--white); margin-bottom: 6px; letter-spacing: 0.3px; }
     .why-item-desc { font-size: 12px; font-weight: 300; color: rgba(253,250,247,0.4); line-height: 1.7; }
 
-    .why-creds {
-      border: 1px solid rgba(206,197,186,0.15);
-      padding: 36px;
-      margin-top: 48px;
-    }
+    .why-creds { border: 1px solid rgba(206,197,186,0.15); padding: 36px; margin-top: 48px; }
 
-    .creds-title {
-      font-size: 9px; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase; color: var(--gold2);
-      margin-bottom: 24px;
-    }
+    .creds-title { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold2); margin-bottom: 24px; }
 
     .cred-item {
       display: flex; justify-content: space-between; align-items: center;
@@ -384,7 +334,6 @@
     .cred-item-key { color: rgba(253,250,247,0.35); }
     .cred-item-val { color: rgba(253,250,247,0.75); font-weight: 500; }
 
-    /* ── PROCESS ── */
     .process { background: var(--cream2); border-top: 1px solid var(--border); }
 
     .process-steps {
@@ -411,21 +360,13 @@
       transition: all 0.3s;
     }
 
-    .process-step:hover .step-num {
-      background: var(--gold); color: var(--white); border-color: var(--gold);
-    }
+    .process-step:hover .step-num { background: var(--gold); color: var(--white); border-color: var(--gold); }
 
-    .step-title {
-      font-size: 11px; font-weight: 600; letter-spacing: 1px;
-      text-transform: uppercase; color: var(--dark); margin-bottom: 8px;
-    }
+    .step-title { font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--dark); margin-bottom: 8px; }
     .step-desc { font-size: 12px; font-weight: 300; color: var(--stone); line-height: 1.6; }
 
-    /* ── CONTACT ── */
     .contact { background: var(--cream); border-top: 1px solid var(--border); }
-
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-
     .contact-info { margin-top: 40px; }
 
     .contact-item {
@@ -446,36 +387,18 @@
     }
     .contact-item:hover .contact-icon { background: var(--gold); border-color: var(--gold); }
 
-    .contact-label {
-      font-size: 9px; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase; color: var(--stone); margin-bottom: 4px;
-    }
+    .contact-label { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--stone); margin-bottom: 4px; }
     .contact-value { font-size: 14px; font-weight: 500; color: var(--dark); }
 
-    /* ── FORM ── */
-    .contact-form {
-      background: var(--dark); padding: 48px 44px;
-    }
+    .contact-form { background: var(--dark); padding: 48px 44px; }
 
-    .form-heading {
-      font-family: 'Playfair Display', serif;
-      font-size: 26px; font-weight: 400; color: var(--white);
-      margin-bottom: 8px;
-    }
-
-    .form-sub {
-      font-size: 13px; font-weight: 300;
-      color: rgba(253,250,247,0.4); margin-bottom: 32px;
-    }
+    .form-heading { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--white); margin-bottom: 8px; }
+    .form-sub { font-size: 13px; font-weight: 300; color: rgba(253,250,247,0.4); margin-bottom: 32px; }
 
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .form-group { margin-bottom: 16px; }
 
-    .form-label {
-      display: block; font-size: 9px; font-weight: 700;
-      letter-spacing: 1.8px; text-transform: uppercase;
-      color: rgba(253,250,247,0.35); margin-bottom: 8px;
-    }
+    .form-label { display: block; font-size: 9px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; color: rgba(253,250,247,0.35); margin-bottom: 8px; }
 
     .form-input, .form-select, .form-textarea {
       width: 100%;
@@ -488,14 +411,8 @@
       appearance: none;
     }
 
-    .form-input:focus, .form-select:focus, .form-textarea:focus {
-      border-color: var(--gold);
-    }
-
-    .form-input::placeholder, .form-textarea::placeholder {
-      color: rgba(253,250,247,0.2);
-    }
-
+    .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--gold); }
+    .form-input::placeholder, .form-textarea::placeholder { color: rgba(253,250,247,0.2); }
     .form-select option { background: var(--dark); color: var(--white); }
     .form-textarea { resize: vertical; min-height: 110px; }
 
@@ -512,20 +429,11 @@
     .form-submit:hover { background: #7A5E30; transform: translateY(-1px); }
     .form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
 
-    .form-success {
-      display: none; text-align: center; padding: 40px 20px;
-    }
-    .form-success h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 24px; color: var(--white); margin-bottom: 12px;
-    }
+    .form-success { display: none; text-align: center; padding: 40px 20px; }
+    .form-success h3 { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--white); margin-bottom: 12px; }
     .form-success p { font-size: 13px; color: rgba(253,250,247,0.5); }
 
-    /* ── FOOTER ── */
-    footer {
-      background: var(--dark); padding: 56px 80px 36px;
-      border-top: 3px solid var(--gold);
-    }
+    footer { background: var(--dark); padding: 56px 80px 36px; border-top: 3px solid var(--gold); }
 
     .footer-grid {
       max-width: 1200px; margin: 0 auto;
@@ -534,22 +442,10 @@
       border-bottom: 1px solid rgba(206,197,186,0.12);
     }
 
-    .footer-brand p {
-      font-size: 12px; font-weight: 300;
-      color: rgba(253,250,247,0.35); line-height: 1.8;
-      margin-top: 20px; max-width: 280px;
-    }
+    .footer-brand p { font-size: 12px; font-weight: 300; color: rgba(253,250,247,0.35); line-height: 1.8; margin-top: 20px; max-width: 280px; }
 
-    .footer-col h4 {
-      font-size: 9px; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase; color: var(--gold2); margin-bottom: 20px;
-    }
-
-    .footer-col a {
-      display: block; font-size: 12px; font-weight: 300;
-      color: rgba(253,250,247,0.4); text-decoration: none;
-      margin-bottom: 12px; transition: color 0.2s;
-    }
+    .footer-col h4 { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold2); margin-bottom: 20px; }
+    .footer-col a { display: block; font-size: 12px; font-weight: 300; color: rgba(253,250,247,0.4); text-decoration: none; margin-bottom: 12px; transition: color 0.2s; }
     .footer-col a:hover { color: var(--white); }
 
     .footer-social { display: flex; gap: 10px; margin-top: 24px; }
@@ -573,61 +469,26 @@
     .footer-bottom p { font-size: 11px; color: rgba(253,250,247,0.25); }
     .footer-licence { font-size: 11px; color: rgba(184,146,79,0.5); text-align: right; }
 
-    /* ── MOBILE ── */
-    @media (max-width: 1024px) {
-      .hero h1 { font-size: clamp(36px, 6vw, 64px); }
-      .hero-panel-logo .logo-mark-hero { font-size: 56px; }
-    }
-
     @media (max-width: 900px) {
       nav { padding: 16px 20px; }
       .nav-links, .nav-btn { display: none; }
       .mobile-toggle { display: block; }
 
-      /* Hero - stack vertically, full width */
-      .hero {
-        grid-template-columns: 1fr !important;
-        min-height: auto !important;
-        padding: 0 !important;
-      }
-      .hero-left {
-        padding: 100px 24px 48px !important;
-        min-height: auto !important;
-      }
+      .hero { grid-template-columns: 1fr !important; min-height: auto !important; padding: 0 !important; }
+      .hero-left { padding: 100px 24px 48px !important; min-height: auto !important; }
       .hero-left h1 { font-size: clamp(36px, 8vw, 52px); }
-      .hero-right {
-        min-height: 420px !important;
-        width: 100% !important;
-      }
-      .hero-panel {
-        min-height: 420px !important;
-        padding: 40px 24px !important;
-        width: 100% !important;
-      }
-      .hero-badges {
-        flex-wrap: wrap !important;
-        gap: 0 !important;
-      }
-      .badge {
-        flex: 1 1 45% !important;
-        min-width: 0 !important;
-        border-right: 1px solid var(--border) !important;
-        border-bottom: 1px solid var(--border) !important;
-      }
-      .badge:last-child:nth-child(odd) {
-        flex: 1 1 100% !important;
-      }
+      .hero-right { min-height: 420px !important; width: 100% !important; }
+      .hero-panel { min-height: 420px !important; padding: 40px 24px !important; width: 100% !important; }
+      .hero-badges { flex-wrap: wrap !important; gap: 0 !important; }
+      .badge { flex: 1 1 45% !important; min-width: 0 !important; border-right: 1px solid var(--border) !important; border-bottom: 1px solid var(--border) !important; }
+      .badge:last-child:nth-child(odd) { flex: 1 1 100% !important; }
 
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .about-stats { grid-template-columns: 1fr 1fr; }
-
       .services-grid { grid-template-columns: 1fr; }
-
       .why-grid { grid-template-columns: 1fr; gap: 32px; }
-
       .process-steps { grid-template-columns: 1fr 1fr; gap: 32px; }
       .process-steps::before { display: none; }
-
       .contact-grid { grid-template-columns: 1fr; gap: 40px; }
       .contact-form { padding: 32px 24px; }
       .form-row { grid-template-columns: 1fr; }
@@ -637,7 +498,6 @@
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
       .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
       .footer-licence { text-align: left; }
-
       .hero-panel-creds { gap: 10px; }
       .cred-row { padding: 10px 0; }
     }
@@ -646,7 +506,6 @@
       .hero-left { padding: 90px 20px 40px !important; }
       .hero-left h1 { font-size: clamp(32px, 9vw, 44px); }
       .hero-panel { padding: 32px 20px !important; }
-      .hero-panel-logo .logo-mark-hero { font-size: 48px; letter-spacing: -2px; }
       .hero-badges { gap: 0; }
       .badge { flex: 1 1 45%; }
       section { padding: 56px 20px; }
@@ -657,7 +516,6 @@
     @media (max-width: 480px) {
       .hero-left { padding: 88px 16px 36px !important; }
       .hero-panel { padding: 28px 16px !important; }
-      .hero-panel-logo .logo-mark-hero { font-size: 42px; }
       .footer-grid { grid-template-columns: 1fr; }
       .badge { flex: 1 1 100% !important; border-right: 1px solid var(--border) !important; }
       section { padding: 48px 16px; }
@@ -666,7 +524,6 @@
       .hero-actions a { text-align: center; }
     }
 
-    /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -677,53 +534,8 @@
     .fade-4 { animation: fadeUp 0.8s 0.5s both; }
     .fade-5 { animation: fadeUp 0.8s 0.65s both; }
 
-    .reveal {
-      opacity: 0; transform: translateY(16px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-
-  /* ── LOGO WORDMARK ── */
-  .logo-mark {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: #8B6F3E;
-    letter-spacing: -1px;
-    line-height: 1;
-    text-decoration: none;
-    display: inline-block;
-    font-style: normal;
-  }
-  .logo-mark-light {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: #B8924F;
-    letter-spacing: -1px;
-    line-height: 1;
-    display: inline-block;
-  }
-  .logo-mark-hero {
-    font-family: 'Playfair Display', serif;
-    font-size: 72px;
-    font-weight: 700;
-    color: #8B6F3E;
-    letter-spacing: -3px;
-    line-height: 1;
-    display: inline-block;
-  }
-  .logo-sub {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: rgba(253,250,247,0.45);
-    margin-top: 8px;
-    display: block;
-    text-align: center;
-  }
   </style>
 </head>
 <body>
@@ -731,7 +543,8 @@
 <!-- NAV -->
 <nav id="nav">
   <a href="#home" class="nav-logo">
-    <span class="logo-mark">ANBM</span>
+    <!-- LOGO: update src to your GitHub raw URL e.g. https://raw.githubusercontent.com/USERNAME/REPO/main/anbm-logo.png -->
+    <img src="anbm-logo.png" alt="ANBM" style="height:42px; width:auto;"/>
   </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
@@ -770,7 +583,7 @@
     <div class="hero-badges fade-5">
       <div class="badge">
         <span class="badge-val">HBCF</span>
-        <span class="badge-key">Approved & Current</span>
+        <span class="badge-key">Approved &amp; Current</span>
       </div>
       <div class="badge">
         <span class="badge-val">PL</span>
@@ -794,8 +607,8 @@
   <div class="hero-right">
     <div class="hero-panel">
       <div class="hero-panel-logo">
-        <span class="logo-mark-hero">ANBM</span>
-        <span class="logo-sub">A.N Building &amp; Management</span>
+        <!-- Inverted white version for dark panel background -->
+        <img src="anbm-logo.png" alt="ANBM" style="height:160px; width:auto; filter: brightness(0) invert(1);"/>
       </div>
 
       <div class="hero-panel-text">
@@ -861,7 +674,7 @@
         </div>
         <div class="about-stat">
           <span class="stat-val">HBCF</span>
-          <span class="stat-key">Approved & Current</span>
+          <span class="stat-key">Approved &amp; Current</span>
         </div>
         <div class="about-stat">
           <span class="stat-val">Resi</span>
@@ -991,7 +804,6 @@
             <span class="cred-item-key">HBCF</span>
             <span class="cred-item-val">Approved &amp; Current</span>
           </div>
-
         </div>
       </div>
     </div>
@@ -1115,7 +927,6 @@
             <label class="form-label">Tell us about your project</label>
             <textarea name="message" class="form-textarea" placeholder="Brief description of your project, location, and approximate budget..."></textarea>
           </div>
-          <!-- Honeypot spam prevention -->
           <input type="text" name="_gotcha" style="display:none"/>
           <input type="hidden" name="_subject" value="New Enquiry — ANBM Website"/>
           <button type="submit" class="form-submit" id="submitBtn">Send Enquiry →</button>
@@ -1136,7 +947,8 @@
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <span class="logo-mark-light">ANBM</span>
+      <!-- Inverted white for dark footer background -->
+      <img src="anbm-logo.png" alt="ANBM" style="height:48px; width:auto; filter: brightness(0) invert(1);"/>
       <p>A.N Building and Management Pty Ltd — premium residential and commercial builder servicing all of Sydney, NSW.</p>
       <div class="footer-social">
         <a href="https://www.instagram.com/a.n_building_and_management" target="_blank" rel="noopener noreferrer" class="soc" aria-label="Instagram">📷</a>
@@ -1147,7 +959,7 @@
     <div class="footer-col">
       <h4>Services</h4>
       <a href="#services">New Home Builds</a>
-      <a href="#services">Renovations & Extensions</a>
+      <a href="#services">Renovations &amp; Extensions</a>
       <a href="#services">Dual Occupancy</a>
       <a href="#services">Commercial</a>
       <a href="#services">Fitouts &amp; Alterations</a>
@@ -1174,12 +986,10 @@
 </footer>
 
 <script>
-  // Nav scroll effect
   window.addEventListener('scroll', () => {
     document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
   });
 
-  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const target = document.querySelector(a.getAttribute('href'));
@@ -1190,7 +1000,6 @@
     });
   });
 
-  // Mobile nav
   let navOpen = false;
   function toggleNav() {
     navOpen = !navOpen;
@@ -1205,7 +1014,6 @@
     }
   }
 
-  // Form submission via Formspree
   document.getElementById('contactForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     const btn = document.getElementById('submitBtn');
@@ -1234,7 +1042,6 @@
     }
   });
 
-  // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
