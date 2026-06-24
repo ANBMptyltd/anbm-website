@@ -153,9 +153,11 @@
     }
 
     .badge {
-      padding: 16px 24px;
+      padding: 16px 20px;
       border: 1px solid var(--border);
       border-right: none;
+      flex: 1 1 auto;
+      min-width: 0;
     }
     .badge:first-child { border-left: 1px solid var(--border); }
     .badge:last-child { border-right: 1px solid var(--border); }
@@ -608,8 +610,12 @@
       }
       .badge {
         flex: 1 1 45% !important;
+        min-width: 0 !important;
         border-right: 1px solid var(--border) !important;
         border-bottom: 1px solid var(--border) !important;
+      }
+      .badge:last-child:nth-child(odd) {
+        flex: 1 1 100% !important;
       }
 
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -653,7 +659,7 @@
       .hero-panel { padding: 28px 16px !important; }
       .hero-panel-logo .logo-mark-hero { font-size: 42px; }
       .footer-grid { grid-template-columns: 1fr; }
-      .badge { flex: 1 1 100%; border-right: none !important; }
+      .badge { flex: 1 1 100% !important; border-right: 1px solid var(--border) !important; }
       section { padding: 48px 16px; }
       .form-row { grid-template-columns: 1fr; }
       .hero-actions { flex-direction: column; gap: 12px; }
