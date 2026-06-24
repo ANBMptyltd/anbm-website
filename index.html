@@ -26,6 +26,7 @@
       --stone:  #9A8F82;
       --border: #CEC5BA;
       --white:  #FDFAF7;
+      --nav-h:  90px;
     }
 
     html { scroll-behavior: smooth; background: var(--cream); color: var(--dark); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
@@ -35,18 +36,20 @@
     ::-webkit-scrollbar-track { background: var(--cream2); }
     ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
 
+    /* NAV — height controlled by logo + padding */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 200;
       display: flex; align-items: center; justify-content: space-between;
-      padding: 20px 48px;
-      background: rgba(237,232,224,0.9);
+      padding: 10px 48px;
+      background: rgba(237,232,224,0.95);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid transparent;
       transition: all 0.4s ease;
     }
-    nav.scrolled { border-bottom-color: var(--border); padding: 14px 48px; }
+    nav.scrolled { border-bottom-color: var(--border); }
 
     .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-logo img { height: 70px; width: auto; display: block; }
 
     .nav-links { display: flex; gap: 36px; list-style: none; }
     .nav-links a {
@@ -67,28 +70,28 @@
 
     .mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
 
+    /* HERO */
     .hero {
       min-height: 100vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      align-items: center;
-      padding: 100px 0 60px;
+      align-items: stretch;
+      padding: 0;
       position: relative;
-      overflow: hidden;
     }
 
     .hero-left {
-      padding: 0 48px 0 80px;
+      padding: 140px 48px 80px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       position: relative;
       z-index: 2;
     }
 
     .hero-right {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      height: 100%;
+      align-items: stretch;
     }
 
     .hero-tag {
@@ -107,7 +110,6 @@
       margin-bottom: 28px;
       letter-spacing: -1px;
     }
-
     h1 em { font-style: italic; color: var(--gold); }
 
     .hero-sub {
@@ -158,15 +160,17 @@
       text-transform: uppercase; color: var(--stone); display: block;
     }
 
+    /* HERO PANEL (dark right side) */
     .hero-panel {
-      width: 100%; height: 100%;
+      width: 100%;
       background: var(--dark);
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      padding: 60px 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 48px 80px;
       position: relative;
-      overflow: hidden;
-      min-height: 100vh;
+      overflow: visible;
     }
 
     .hero-panel::before {
@@ -182,19 +186,28 @@
     }
 
     .hero-panel-logo {
-      position: relative; z-index: 2;
+      position: relative;
+      z-index: 2;
       animation: floatLogo 6s ease-in-out infinite;
+    }
+
+    .hero-panel-logo img {
+      height: 280px;
+      width: auto;
+      max-width: 100%;
+      filter: brightness(0) invert(1);
+      display: block;
     }
 
     @keyframes floatLogo {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
+      50% { transform: translateY(-14px); }
     }
 
     .hero-panel-text {
       position: relative; z-index: 2;
       text-align: center;
-      margin-top: 48px;
+      margin-top: 40px;
     }
 
     .hero-panel-text h2 {
@@ -213,7 +226,7 @@
       margin-top: 48px; width: 100%;
       border-top: 1px solid rgba(206,197,186,0.15);
       padding-top: 32px;
-      display: flex; flex-direction: column; gap: 16px;
+      display: flex; flex-direction: column; gap: 14px;
     }
 
     .cred-row {
@@ -242,11 +255,11 @@
       font-weight: 400; color: var(--dark);
       line-height: 1.15; letter-spacing: -0.5px;
     }
-
     h2 em { font-style: italic; color: var(--gold); }
 
     .sec-body { font-size: 15px; font-weight: 300; color: var(--stone); line-height: 1.85; max-width: 540px; }
 
+    /* ABOUT */
     .about { background: var(--cream2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 
@@ -266,6 +279,7 @@
     }
     .stat-key { font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--stone); }
 
+    /* SERVICES */
     .services-grid {
       display: grid; grid-template-columns: repeat(3, 1fr);
       gap: 1px; background: var(--border);
@@ -299,6 +313,7 @@
     .svc-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; color: var(--dark); margin-bottom: 14px; }
     .svc-desc { font-size: 13px; font-weight: 300; color: var(--stone); line-height: 1.8; }
 
+    /* WHY */
     .why { background: var(--dark); }
     .why .sec-tag { color: var(--gold2); }
     .why .sec-tag::after { background: var(--gold2); }
@@ -334,6 +349,7 @@
     .cred-item-key { color: rgba(253,250,247,0.35); }
     .cred-item-val { color: rgba(253,250,247,0.75); font-weight: 500; }
 
+    /* PROCESS */
     .process { background: var(--cream2); border-top: 1px solid var(--border); }
 
     .process-steps {
@@ -365,6 +381,7 @@
     .step-title { font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--dark); margin-bottom: 8px; }
     .step-desc { font-size: 12px; font-weight: 300; color: var(--stone); line-height: 1.6; }
 
+    /* CONTACT */
     .contact { background: var(--cream); border-top: 1px solid var(--border); }
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
     .contact-info { margin-top: 40px; }
@@ -433,6 +450,7 @@
     .form-success h3 { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--white); margin-bottom: 12px; }
     .form-success p { font-size: 13px; color: rgba(253,250,247,0.5); }
 
+    /* FOOTER */
     footer { background: var(--dark); padding: 56px 80px 36px; border-top: 3px solid var(--gold); }
 
     .footer-grid {
@@ -469,21 +487,43 @@
     .footer-bottom p { font-size: 11px; color: rgba(253,250,247,0.25); }
     .footer-licence { font-size: 11px; color: rgba(184,146,79,0.5); text-align: right; }
 
+    /* MOBILE */
     @media (max-width: 900px) {
-      nav { padding: 16px 20px; }
+      nav { padding: 10px 20px; }
       .nav-links, .nav-btn { display: none; }
       .mobile-toggle { display: block; }
-      .nav-logo img { height: 80px !important; }
-      .hero-panel-logo img { height: 220px !important; width: auto !important; max-width: 85% !important; }
+      .nav-logo img { height: 60px !important; }
 
-      .hero { grid-template-columns: 1fr !important; min-height: auto !important; padding: 0 !important; }
-      .hero-left { padding: 100px 24px 48px !important; min-height: auto !important; }
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .hero-left {
+        padding: 110px 24px 48px;
+      }
+
       .hero-left h1 { font-size: clamp(36px, 8vw, 52px); }
-      .hero-right { min-height: 420px !important; width: 100% !important; }
-      .hero-panel { min-height: 420px !important; padding: 40px 24px !important; width: 100% !important; }
-      .hero-badges { flex-wrap: wrap !important; gap: 0 !important; }
-      .badge { flex: 1 1 45% !important; min-width: 0 !important; border-right: 1px solid var(--border) !important; border-bottom: 1px solid var(--border) !important; }
-      .badge:last-child:nth-child(odd) { flex: 1 1 100% !important; }
+
+      .hero-right {
+        width: 100%;
+      }
+
+      .hero-panel {
+        width: 100%;
+        min-height: 600px;
+        padding: 60px 24px 60px;
+        overflow: visible;
+      }
+
+      .hero-panel-logo img {
+        height: 200px !important;
+        max-width: 85% !important;
+      }
+
+      .hero-badges { flex-wrap: wrap; gap: 0; }
+      .badge { flex: 1 1 45%; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+      .badge:last-child:nth-child(odd) { flex: 1 1 100%; }
 
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .about-stats { grid-template-columns: 1fr 1fr; }
@@ -501,13 +541,13 @@
       .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
       .footer-licence { text-align: left; }
       .hero-panel-creds { gap: 10px; }
-      .cred-row { padding: 10px 0; }
     }
 
     @media (max-width: 640px) {
-      .hero-left { padding: 90px 20px 40px !important; }
+      .hero-left { padding: 100px 20px 40px; }
       .hero-left h1 { font-size: clamp(32px, 9vw, 44px); }
-      .hero-panel { padding: 32px 20px !important; }
+      .hero-panel { min-height: 560px; padding: 50px 20px 50px; }
+      .hero-panel-logo img { height: 160px !important; }
       .hero-badges { gap: 0; }
       .badge { flex: 1 1 45%; }
       section { padding: 56px 20px; }
@@ -516,8 +556,9 @@
     }
 
     @media (max-width: 480px) {
-      .hero-left { padding: 88px 16px 36px !important; }
-      .hero-panel { padding: 28px 16px !important; }
+      .hero-left { padding: 95px 16px 36px; }
+      .hero-panel { min-height: 520px; padding: 44px 16px; }
+      .hero-panel-logo img { height: 140px !important; }
       .footer-grid { grid-template-columns: 1fr; }
       .badge { flex: 1 1 100% !important; border-right: 1px solid var(--border) !important; }
       section { padding: 48px 16px; }
@@ -545,8 +586,7 @@
 <!-- NAV -->
 <nav id="nav">
   <a href="#home" class="nav-logo">
-    <!-- LOGO: update src to your GitHub raw URL e.g. https://raw.githubusercontent.com/USERNAME/REPO/main/anbm-logo.png -->
-    <img src="anbm-logo.png" alt="ANBM" style="height:120px; width:auto;"/>
+    <img src="anbm-logo.png" alt="ANBM"/>
   </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
@@ -565,7 +605,7 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="home" style="padding:0;">
+<section class="hero" id="home">
   <div class="hero-left">
     <div class="hero-tag fade-1">Licensed NSW Builder — Sydney</div>
 
@@ -609,8 +649,7 @@
   <div class="hero-right">
     <div class="hero-panel">
       <div class="hero-panel-logo">
-        <!-- Inverted white version for dark panel background -->
-        <img src="anbm-logo.png" alt="ANBM" style="height:400px; width:auto; max-width:90%; filter: brightness(0) invert(1);"/>
+        <img src="anbm-logo.png" alt="ANBM"/>
       </div>
 
       <div class="hero-panel-text">
@@ -949,8 +988,7 @@
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <!-- Inverted white for dark footer background -->
-      <img src="anbm-logo.png" alt="ANBM" style="height:200px; width:auto; filter: brightness(0) invert(1);"/>
+      <img src="anbm-logo.png" alt="ANBM" style="height:100px; width:auto; filter: brightness(0) invert(1);"/>
       <p>A.N Building and Management Pty Ltd — premium residential and commercial builder servicing all of Sydney, NSW.</p>
       <div class="footer-social">
         <a href="https://www.instagram.com/a.n_building_and_management" target="_blank" rel="noopener noreferrer" class="soc" aria-label="Instagram">📷</a>
@@ -997,7 +1035,7 @@
       const target = document.querySelector(a.getAttribute('href'));
       if (target) {
         e.preventDefault();
-        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 76, behavior: 'smooth' });
+        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 90, behavior: 'smooth' });
       }
     });
   });
@@ -1008,7 +1046,7 @@
     const links = document.querySelector('.nav-links');
     const btn = document.querySelector('.nav-btn');
     if (navOpen) {
-      links.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:62px;left:0;right:0;background:rgba(237,232,224,0.98);backdrop-filter:blur(12px);padding:20px 24px 28px;gap:18px;border-bottom:1px solid var(--border);z-index:199;';
+      links.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:80px;left:0;right:0;background:rgba(237,232,224,0.98);backdrop-filter:blur(12px);padding:20px 24px 28px;gap:18px;border-bottom:1px solid var(--border);z-index:199;';
       btn.style.cssText = 'display:block;margin:0 24px 20px;';
     } else {
       links.style.cssText = 'display:none;';
